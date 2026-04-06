@@ -1,0 +1,27 @@
+Hi, my name is Alisha Verma. Today, I will be presenting my web server log analysis project as part of the assessment.
+
+In this video, I will walk through my approach, data processing steps, and key insights from the dataset. The dataset used in this project consists of web server logs containing information such as IP address, timestamp, request method, status code, and response size. This type of data is useful for analyzing user activity and monitoring server performance.
+
+The dataset is in a semi-structured format, where each row represents one HTTP request and includes fields like host, timestamp, request, status code, and bytes transferred. The dataset was provided as a compressed GZ file, which I handled directly using Python.
+
+To efficiently load the data, I used the gzip module and read the file line by line instead of extracting it. This approach is memory-efficient and suitable for large datasets. Since the log data is semi-structured, I used regular expressions to extract important fields such as host, timestamp, request, status, and bytes. This allowed me to convert raw log lines into structured data.
+
+After parsing, I performed data cleaning steps. I converted the timestamp into a datetime format for easier analysis. I handled missing values by replacing values represented as a dash with zero. I also ensured correct data types for status and bytes fields and skipped invalid records.
+
+Then, I created a pandas DataFrame from the cleaned data and performed feature engineering, such as extracting date and hour, which helped in time-based analysis.
+
+Next, I implemented multiple analysis functions to extract meaningful insights from the dataset. First, I calculated the total number of log records to understand the dataset size. Then, I identified the number of unique hosts accessing the server to understand how many distinct users interacted with the system.
+
+I also analyzed the number of requests per day to observe traffic trends over time. Next, I focused on HTTP status codes, especially identifying the number of 404 errors, which indicate failed or broken requests.
+
+Additionally, I extracted the top filenames and file extensions that resulted in 404 errors to understand which resources were causing issues. I calculated bandwidth usage for specific time periods by summing response sizes, which helps measure data transfer.
+
+I also analyzed the hourly distribution of requests to identify peak traffic hours. Further, I identified the most requested filenames to understand user behavior and popular resources. Finally, I analyzed the overall distribution of HTTP status codes to evaluate server performance and reliability.
+
+For this project, I used Python along with libraries like pandas for data analysis and Visual Studio Code for implementation.
+
+In conclusion, this project provides valuable insights into server usage, helps identify error patterns, and supports improving system performance and reliability.
+
+I have also exported the analysis results into an HTML report for better visualization and sharing. This is the HTML file where I have exported the complete analysis results.
+
+Thank you for giving me this opportunity. I look forward to your feedback.
