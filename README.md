@@ -99,12 +99,6 @@ calgary-http-assessment/
 ├── README.md
 
 ```
----
-
-## 🎥 Video Explanation
-A detailed walkthrough of the project is provided below:
-
-👉 https://youtu.be/gXWgdeSG0BA
 
 ---
 
